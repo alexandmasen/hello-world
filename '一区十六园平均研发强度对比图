@@ -1,0 +1,56 @@
+option = {
+    title : {
+        text: '一区十六园平均研发强度对比图',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        x : 'center',
+        y : 'bottom',
+        data:['海淀园','朝阳园','东城园','西城园','丰台园','石景山园','门头沟园','顺义园','昌平园','大兴-亦庄园','怀柔园','密云园','延庆园','房山园','平谷园']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+       series : [
+        {
+            name:'面积模式',
+            type:'pie',
+            radius : [20, 140],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            data:[
+                 {value:4.5, name:'海淀园'},
+                {value:4.2, name:'朝阳园'},
+                {value:1.5, name:'东城园'},
+                {value:2.5, name:'西城园'},
+                {value:2.0, name:'丰台园'},
+                {value:3.5, name:'石景山园'},
+                {value:3.0, name:'门头沟园'},
+                {value:1.0, name:'通州园'},
+                {value:2.0, name:'顺义园'},
+                {value:3.0, name:'昌平园'},
+                {value:1.5, name:'大兴-亦庄园'},
+                {value:2.4, name:'怀柔园'},
+                {value:2.9, name:'密云园'},
+                {value:1.0, name:'延庆园'},
+                {value:2.2, name:'房山园'},
+                {value:3.0, name:'平谷园'}
+            ]
+        }
+    ]
+};
