@@ -52,6 +52,32 @@ option = {
             type:'bar',
             stack: '广告',
             data:[150, 232, 201, 154, 190, 330, 410]
-        }
+        },
+        {
+                name: 'GDP占比',
+                type: 'pie',
+                center: ['75%', '35%'],
+                radius: '28%',
+                z: 100
+            }
+        ]
+    },
+    options: [
+        {
+            title: {text: '2002全国宏观经济指标'},
+            series: [
+                {data: dataMap.dataGDP['2002']},
+                {data: dataMap.dataFinancial['2002']},
+                {data: dataMap.dataEstate['2002']},
+                {data: dataMap.dataPI['2002']},
+                {data: dataMap.dataSI['2002']},
+                {data: dataMap.dataTI['2002']},
+                {data: [
+                    {name: '第一产业', value: dataMap.dataPI['2002sum']},
+                    {name: '第二产业', value: dataMap.dataSI['2002sum']},
+                    {name: '第三产业', value: dataMap.dataTI['2002sum']}
+                ]}
+            ]
+        },
     ]
 };
