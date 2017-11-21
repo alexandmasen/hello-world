@@ -8,8 +8,8 @@ option = {
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: {
-        orient: 'vertical',
-        x: 'left',
+        x: 'center',
+        y: 'bottom',
         data:['上市企业','未上市企业','电子信息类','生物医药类','先进制造业类','其他']
     },
     series: [
