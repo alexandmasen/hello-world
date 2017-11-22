@@ -1,0 +1,642 @@
+var option = {
+    animationDurationUpdate: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    title : {
+        text: '园区内企业并购关系',
+        x:'center'
+    },
+    series: [{
+        type: 'graph',
+        tooltip: {},
+        ribbonType: true,
+        layout: 'circular',
+
+        circular: {
+            rotateLabel: true
+        },
+        symbolSize: 30,
+        roam: true,
+        focusNodeAdjacency: true,
+
+        label: {
+            normal: {
+                position: 'center',
+                fontWeight: 'bold',
+                formatter: '{b}',
+                normal: {
+                    textStyle: {
+
+                        fontFamily: '宋体'
+                    }
+                }
+            }
+        },
+
+        edgeSymbol: ['circle'],
+        edgeSymbolSize: [4, 10],
+        edgeLabel: {
+            normal: {
+                textStyle: {
+                    fontSize: 13,
+                    fontWeight: 'bold',
+                    fontFamily: '宋体'
+                }
+            }
+        },
+
+        itemStyle: {
+            normal: {
+                label: {
+                    rotate: true,
+                    show: true,
+                    textStyle: {
+                        color: '#333',
+                        fontWeight: 'bold'
+                    }
+                },
+                color: ["#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7"] /* 内的颜色#393f51，外的颜色#85d6f7 */
+            },
+            emphasis: {
+                label: {
+                    show: true
+                        // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                }
+            }
+        },
+
+        data: [{
+            name: '海淀园',
+            itemStyle: {
+                normal: {
+                    color: '#393f51'
+                }
+            }
+        }, {
+            name: '朝阳园',
+            itemStyle: {
+                normal: {
+                    color: '#393f51'
+                }
+            }
+        }, {
+            name: '东城园',
+            itemStyle: {
+                normal: {
+                    color: '#393f51'
+                }
+            }
+        }, {
+            name: '西城园',
+            itemStyle: {
+                normal: {
+                    color: '#393f51'
+                }
+            }
+        }, {
+            name: '丰台园',
+            itemStyle: {
+                normal: {
+                    color: '#393f51'
+                }
+            }
+        }, {
+            name: '石景山园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '门头沟园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '顺义园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '昌平园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '大兴-亦庄园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '怀柔园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '密云园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '延庆园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '房山园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '平谷园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }, {
+            name: '通州园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6f7'
+                }
+            }
+        }],
+        // links: [],
+        links: [{
+                source: '海淀园',
+                target: '朝阳园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 9,
+                        curveness: 0.2,
+                        color: '#fcae00'
+                    }
+                }
+            }, {
+                source: '海淀园',
+                target: '昌平园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3,
+                        curveness: 0.2,
+                        color: '#fcae00'
+                    }
+                }
+            }, {
+                source: '海淀园',
+                target: '延庆园',
+                name: 'xxx',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#fcae00'
+                    }
+                }
+            }, {
+                source: '延庆园',
+                target: '门头沟园',
+                name: 'xxx',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 5,
+                        curveness: 0.2,
+                        color: '#fcae01'
+                    }
+                }
+            }, {
+                source: '阿森纳',
+                target: '波多尔斯基',
+                name: 'xxx',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#fcae00'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '诺伊尔',
+                name: 'yyy',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '博阿滕',
+                name: 'yyy',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '施魏因施泰格',
+                name: 'yyy',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '拉姆',
+                name: 'yyy',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '克罗斯',
+                name: 'yyy',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '穆勒',
+                name: 'xxx',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#fcae00'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '格策',
+                name: 'zzz',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }, {
+                source: '拜仁慕尼黑',
+                target: '多特蒙德',
+                name: 'zzz',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }, {
+                source: '多特蒙德',
+                target: '胡梅尔斯',
+                name: 'zzz',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }, {
+                source: '多特蒙德',
+                target: '魏登费勒',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }, {
+                source: '多特蒙德',
+                target: '杜尔姆',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }, {
+                source: '多特蒙德',
+                target: '格罗斯克罗伊茨',
+                name: 'zzz',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [5, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 0.5,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }
+
+
+        ]
+    }]
+};
+myChart.setOption(option);
