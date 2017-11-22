@@ -1,0 +1,1995 @@
+var option = {
+    animationDurationUpdate: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    title : {
+        text: '园区内企业并购关系',
+        x:'center'
+    },
+    series: [{
+        type: 'graph',
+        tooltip: {},
+        ribbonType: true,
+        layout: 'circular',
+        x: '130',
+        y:'71',
+        circular: {
+            rotateLabel: true
+        },
+        symbolSize: 14,
+        roam: true,
+        focusNodeAdjacency: true,
+
+        label: {
+            normal: {
+                position: 'center',
+                fontWeight: 'bold',
+                formatter: '{b}',
+                normal: {
+                    textStyle: {
+
+                        fontFamily: '宋体'
+                    }
+                }
+            }
+        },
+
+        edgeSymbol: ['circle'],
+        edgeSymbolSize: [2, 5],
+        edgeLabel: {
+            normal: {
+                textStyle: {
+                    fontSize: 9,
+                    fontWeight: 'bold',
+                    fontFamily: '宋体'
+                }
+            }
+        },
+
+        itemStyle: {
+            normal: {
+                label: {
+                    rotate: true,
+                    show: true,
+                    textStyle: {
+                        color: '#333',
+                        fontWeight: 'bold'
+                    }
+                },
+                color: ["bda29a", "#37bfe9", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7"] /* 内的颜色#393f51，外的颜色#85d6f7 */
+            },
+            emphasis: {
+                label: {
+                    show: true
+                        // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                }
+            }
+        },
+
+        data: [{
+            name: '海淀园',
+            itemStyle: {
+                normal: {
+                    color: '#bdf'
+                }
+            }
+        }, {
+            name: '朝阳园',
+            itemStyle: {
+                normal: {
+                    color: '#749f83'
+                }
+            }
+        }, {
+            name: '东城园',
+            itemStyle: {
+                normal: {
+                    color: '#d48265'
+                }
+            }
+        }, {
+            name: '西城园',
+            itemStyle: {
+                normal: {
+                    color: '#61a0a8'
+                }
+            }
+        }, {
+            name: '丰台园',
+            itemStyle: {
+                normal: {
+                    color: '#393f51'
+                }
+            }
+        }, {
+            name: '石景山园',
+            itemStyle: {
+                normal: {
+                    color: '#85d6'
+                }
+            }
+        }, {
+            name: '门头沟园',
+            itemStyle: {
+                normal: {
+                    color: '#ffde33'
+                }
+            }
+        }, {
+            name: '顺义园',
+            itemStyle: {
+                normal: {
+                    color: '#ff9933'
+                }
+            }
+        }, {
+            name: '昌平园',
+            itemStyle: {
+                normal: {
+                    color: '#096'
+                }
+            }
+        }, {
+            name: '大兴-亦庄园',
+            itemStyle: {
+                normal: {
+                    color: '#660099'
+                }
+            }
+        }, {
+            name: '怀柔园',
+            itemStyle: {
+                normal: {
+                    color: '#7e0023'
+                }
+            }
+        }, {
+            name: '密云园',
+            itemStyle: {
+                normal: {
+                    color: '#888'
+                }
+            }
+        }, {
+            name: '延庆园',
+            itemStyle: {
+                normal: {
+                    color:'#37bfe9'
+                }
+            }
+        }, {
+            name: '房山园',
+            itemStyle: {
+                normal: {
+                    color: '#c23531'
+                }
+            }
+        }, {
+            name: '平谷园',
+            itemStyle: {
+                normal: {
+                    color: '#660'
+                }
+            }
+        }, {
+            name: '通州园',
+            itemStyle: {
+                normal: {
+                    color: '#267'
+                }
+            }
+        }],
+        // links: [],
+        links: [{
+                source: '海淀园',
+                target: '朝阳园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 1],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#fcded'
+                    }
+                }
+            }, {
+                source: '海淀园',
+                target: '昌平园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#999'
+                    }
+                }
+            }, {
+                source: '海淀园',
+                target: '延庆园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#338'
+                    }
+                }
+            }, {
+                source: '延庆园',
+                target: '门头沟园',
+            
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#c23631'
+                    }
+                }
+            }, {
+                source: '房山园',
+                target: '大兴-亦庄园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#a4fa5d'
+                    }
+                }
+            }, {
+                source: '顺义园',
+                target: '大兴-亦庄园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#267'
+                    }
+                }}, {
+                source: '朝阳园',
+                target: '门头沟园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.3,
+                        color: '#fa5d'
+                    }
+                }}, {
+                source: '西城园',
+                target: '房山园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.5,
+                        color: '#fcae01'
+                    }
+                }}, {
+                source: '海淀园',
+                target: '门头沟园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness:0.6 ,
+                        color: '#a4fa5d'
+                    }
+                }}, {
+                source: '房山园',
+                target: '大兴-亦庄园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                line: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#a4fa5d'
+                    }
+                }    
+            }, {
+                source: '顺义园',
+                target: '通州园',
+           
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                line: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.5,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '石景山园',
+                target: '平谷园',
+           
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.9,
+                        color: '#999'
+                    }
+                }
+            }, {
+                source: '东城园',
+                target: '通州园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.2,
+                        color: '#c63'
+                    }
+                }
+            }, {
+                source: '石景山园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#c63'
+                    }
+                }}, {
+                source: '门头沟园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.5,
+                        color: '#c63'
+                    }
+                }}, {
+                source: '平谷园',
+                target: '朝阳园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.4,
+                        color: '#c63'
+                    }
+                }}, {
+                source: '密云园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.9,
+                        color: '#ff9933'
+                    }
+                }}, {
+                source: '密云园',
+                target: '怀柔园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#c267'
+                    }
+                }}, {
+                source: '密云园',
+                target: '大兴-亦庄园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.2,
+                        color: '#c63'
+                    }
+                }}, {
+                source: '密云园',
+                target: '朝阳园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#999'
+                    }
+                }}, {
+                source: '密云园',
+                target: '门头沟园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.2,
+                        color: '#ffde33'
+                    }
+                }}, {
+                source: '海淀园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1.5,
+                        
+                        curveness: 0.1,
+                        color: '#ffde33'
+                    }
+                    
+                }}, {
+                source: '房山园',
+                target: '顺义园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1.5,
+                        
+                        curveness: 0.1,
+                        color: '#ffde33'
+                    }
+                }
+                }, {
+                source: '西城园',
+                target: '大兴-亦庄园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1.5,
+                        
+                        curveness: 0.1,
+                        color: '#bd3f'
+                    }
+                }
+                }, {
+                source: '房山园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#bd3f'
+                    }
+                }
+                }, {
+                source: '房山园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#ffde33'
+                    }
+                }
+                }, {
+                source: '石景山园',
+                target: '通州园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#ffde33'
+                    }
+                }}, {
+                source: '顺义园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#660'
+                    }
+                }}, {
+                source: '昌平园',
+                target: '延庆园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#ff9933'
+                    }
+                }}, {
+                source: '昌平园',
+                target: '怀柔园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#ff9933'
+                    }
+                }}, {
+                source: '顺义园',
+                target: '密云园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '丰台园',
+                target: '延庆园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '通州园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '海淀园',
+                target: '平谷园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '西城园',
+                target: '朝阳园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#ff9933'
+                    }
+                }}, {
+                source: '平谷园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '平谷园',
+                target: '昌平园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '昌平园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '密云园',
+                target: '通州园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '大兴-亦庄园',
+                target: '延庆园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '石景山园',
+                target: '顺义园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '丰台园',
+                target: '门头沟园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }}, {
+                source: '顺义园',
+                target: '朝阳园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.3,
+                        color: '#091'
+                    }
+                }}, {
+                source: '石景山园',
+                target: '海淀园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.3,
+                        color: '#096'
+                    }
+                }}, {
+                source: '延庆园',
+                target: '东城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.3,
+                        color: '#096'
+                    }
+                }}, {
+                source: '丰台园',
+                target: '西城园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        
+                        curveness: 0.1,
+                        color: '#263'
+                    }
+                }    
+            }, {
+                source: '怀柔园',
+                target: '顺义园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#909'
+                    }
+                }
+            }, {
+                source: '平谷园',
+                target: '延庆园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#690'
+                    }
+                }
+            }, {
+                source: '房山园',
+                target: '昌平园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#d48265'
+                    }
+                }
+            }, {
+                source: '西城园',
+                target: '海淀园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#d48265'
+                    }
+                }
+            }, {
+                source: '怀柔园',
+                target: '平谷园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '朝阳园',
+                target: '顺义园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '怀柔园',
+                target: '朝阳园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#d48265'
+                    }
+                }
+            }, {
+                source: '西城园',
+                target: '门头沟园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '门头沟园',
+                target: '平谷园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '海淀园',
+                target: '丰台园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#d48265'
+                    }
+                }
+            }, {
+                source: '房山园',
+                target: '通州园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.1,
+                        color: '#749f83'
+                    }
+                }
+            }, {
+                source: '平谷园',
+                target: '顺义园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#6c700'
+                    }
+                }    
+            }, {
+                source: '丰台园',
+                target: '昌平园',
+             
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#6c70c0'
+                    }
+                }
+            }, {
+                source: '西城园',
+                target: '门头沟园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#c23555'
+                    }
+                }
+            }, {
+                source: '昌平园',
+                target: '顺义园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#37bfe9'
+                    }
+                }
+            }, {
+                source: '大兴-亦庄园',
+                target: '门头沟园',
+              
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width:1,
+                        curveness: 0.2,
+                        color: '#389'
+                    }
+                }
+            }, {
+                source: '丰台园',
+                target: '平谷园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#e9dg'
+                    }
+                }
+            }, {
+                source: '石景山园',
+                target: '朝阳园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#c23531'
+                    }
+                }
+            }, {
+                source: '密云园',
+                target: '平谷园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#fcae01'
+                    }
+                }
+            }, {
+                source: '大兴-亦庄园',
+                target: '通州园',
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#660'
+                    }
+                }
+            }, {
+                source: '怀柔园',
+                target: '房山园',
+               
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params, ticket, callback) {
+                        return params.data.name;
+                    }
+                },
+                symbolSize: [1, 20],
+                label: {
+                    normal: {
+                        formatter: function(params, ticket, callback) {
+                            params.name = params.data.name;
+                            return params.name;
+                        },
+                        show: false
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 1,
+                        curveness: 0.2,
+                        color: '#cae01'
+                    }
+                }
+            }
+
+
+        ]
+    }]
+};
+myChart.setOption(option);
