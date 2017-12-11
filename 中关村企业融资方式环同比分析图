@@ -84,7 +84,7 @@ var labelOption = {
 };
 
 option = {
-    color: '#999',
+    color: ['#61a0a8', '#91c7ae', '#d48265'],
     tooltip: {
         trigger: 'axis',
         axisPointer: {
