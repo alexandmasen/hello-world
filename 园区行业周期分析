@@ -1,0 +1,66 @@
+option = {
+    title:{
+        text: '园区行业周期分析',
+        x: 'center',
+        y: 0
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: false, readOnly: false},
+            magicType: {show: false, type: ['line', 'bar']},
+            restore: {show: false},
+            saveAsImage: {show: false}
+        }
+    },
+    legend: {
+        data:['处在不同行业周期的企业数量','行业周期曲线'],
+        x: 'center',
+        y: '5%'
+    },
+    color:['#91c7ae', '#c23531', '#546570'],
+    xAxis: [
+        {
+            type: 'category',
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '处在不同行业周期的企业数量',
+            min: 0,
+            max: 50,
+            interval: 50,
+            axisLabel: {
+                formatter: '{value} 家'
+            }
+        }
+    ],
+    grid: {
+        x: '17%', y: '17%', left:'14%'
+    },
+    series: [
+        {
+            name:'2017年并购数',
+            type:'bar',
+            data:[2, 29, 20, 26, 28, 27, 1],
+            barCategoryGap: '40%',
+        },
+        {
+            name:'同比增长率',
+            type:'line',
+            data:[2.0, 3.2, 5.3, 9.4, 14.3, 20.2, 27.3, 32.5, 34.2, 33.5],
+            symbol:'none',//这句就是去掉点的 
+            smooth:true,//这句就是让曲线变平滑的
+        }
+    ]
+};
