@@ -42,6 +42,8 @@ option = {
     radiusAxis: {
     },
     polar: {
+        center: ['50%', '50%'],
+        radius: 190,
     },
     series: [{
         type: 'bar',
@@ -62,7 +64,7 @@ option = {
             return d[1] - d[0];
         }),
         coordinateSystem: 'polar',
-        name: '毛利率范围',
+        name: '毛利率',
         stack: '最大最小值'
     }, {
         type: 'bar',
