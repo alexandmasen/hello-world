@@ -1,0 +1,186 @@
+var size = 60;
+var size1 = 30;
+var yy = 200;
+var yy1 = 250;
+option = {
+    title: {
+        text: "园区企业担保关系图",
+        top: "top",
+        left: "center",
+    },
+    tooltip: {
+        formatter: '{b}'
+    },
+    animationDuration: 1000,
+    animationEasingUpdate: 'quinticInOut',
+    series: [{
+        name: '担保关系',
+        type: 'graph',
+        layout: 'force',
+        force: {
+            repulsion: 40,
+            gravity: 0.1,
+            edgeLength: 13,
+            layoutAnimation: true,
+        },
+        edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [4, 10],
+            edgeLabel: {
+                normal: {
+                    textStyle: {
+                        fontSize: 20
+                    }
+                }
+            },
+        data: [{
+            "name": "视动科技",
+            x: 0,
+            y: yy,
+            "symbolSize": 100,
+            "category": "视动科技",
+            "draggable": "true"
+        }, {
+            "name": "陈学礼",
+            x: 10,
+            y: yy1,
+            "symbolSize": 50,
+            "category": "Hadoop",
+            "draggable": "true"
+
+        }, {
+            "name": "神州绿盟信息安全",
+            x: 20,
+            y: yy,
+            "symbolSize": 70,
+            "category": "Hadoop",
+            "draggable": "true"
+        }, {
+            x: 40,
+            y: yy,
+            "name": "剑鱼科技",
+            "symbolSize": size1,
+            "category": "Hadoop",
+            "draggable": "true",
+            "value": 1
+        }, {
+            x: 50,
+            y: yy1,
+            "name": "神州绿盟信息技术",
+            "symbolSize": 70,
+            "category": "HBase",
+            "draggable": "true"
+        }, {
+            x: 60,
+            y: yy,
+            "name": "逸得网络",
+            "symbolSize": size1,
+            "category": "其它组件",
+            "draggable": "true"
+        }, {
+            x: 70,
+            y: yy1,
+            "name": "敏讯科技",
+            "symbolSize": size1,
+            "category": "HBase",
+            "draggable": "true"
+        }, {
+            x: 80,
+            y: yy,
+            "name": "马小雪",
+            "symbolSize": size,
+            "category": "Spark",
+            "draggable": "true"
+        }],
+        links: [{
+            "source": "陈学礼",
+            "target": "视动科技"
+        }, {
+            "source": "视动科技",
+            "target": "Spark"
+        }, {
+            "source": "视动科技",
+            "target": "Storm"
+        }, {
+            "source": "视动科技",
+            "target": "其它组件"
+        }, {
+            "source": "视动科技",
+            "target": "NoSQL"
+        }, {
+            "source": "视动科技",
+            "target": "数据挖掘"
+        }, {
+            "source": "视动科技",
+            "target": "行业应用"
+        }, {
+            "source": "陈学礼",
+            "target": "神州绿盟信息安全"
+        }, {
+            "source": "陈学礼",
+            "target": "剑鱼科技"
+        }, {
+            "source": "陈学礼",
+            "target": "MapReduce"
+        }, {
+            "source": "神州绿盟信息安全",
+            "target": "神州绿盟信息技术"
+        }, {
+            "source": "神州绿盟信息技术",
+            "target": "视动科技"
+        }, {
+            "source": "马小雪",
+            "target": "视动科技"
+        }, {
+            "source": "马小雪",
+            "target": "逸得网络"
+        }, {
+            "source": "马小雪",
+            "target": "敏讯科技"
+        }, {
+            "source": "神州绿盟信息技术",
+            "target": "逸得网络"
+        }, {
+            "source": "神州绿盟信息技术",
+            "target": "敏讯科技"
+        }, {
+            "source": "神州绿盟信息技术",
+            "target": "剑鱼科技"
+        }],
+        categories: [{
+            'name': '视动科技'
+        }, {
+            'name': 'Hadoop'
+        }, {
+            'name': 'HBase'
+        }, {
+            'name': 'Spark'
+        }, {
+            'name': 'Storm'
+        }, {
+            'name': '其它组件'
+        }, {
+            'name': 'NoSQL'
+        }, {
+            'name': '数据挖掘'
+        }, {
+            'name': '行业应用'
+        }],
+        roam: false,
+        label: {
+            normal: {
+                show: true,
+                position: 'inside',
+                formatter: '{b}',
+                fontSize: 16,
+            }
+        },
+        lineStyle: {
+            normal: {
+                width: 1,
+                color: 'source',
+                curveness: 0,
+                type: "solid"
+            }
+        }
+    }]
+};
