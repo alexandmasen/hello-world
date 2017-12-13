@@ -17,7 +17,7 @@ var barHeight = 0.05;
 
 option = {
     title: {
-        text: '毛利率分析',
+        text: '中关村行业毛利率分析',
         left: 'center'
     },    
     legend: {
