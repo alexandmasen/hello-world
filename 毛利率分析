@@ -4,7 +4,7 @@ var data = [
     [3.000, 6.500, 4.463],
     [2.500, 5.600, 3.793],
     [2.000, 4.000, 3.060],
-    [2.000, 3.22, 3.000 ],
+    [2.000, 3.22, 2.500 ],
     [2.500, 4.000, 3.13],
     [1.800, 4.000, 3.100],
     [2.000, 3.500, 2.750],
@@ -18,10 +18,12 @@ var barHeight = 0.05;
 option = {
     title: {
         text: '毛利率分析',
+        left: 'center'
     },    
     legend: {
         show: true,
-        data: ['毛利率', '均值']
+        data: ['毛利率', '均值'],
+        y: '7%'
     },
     grid: {
         top: 10
@@ -75,7 +77,7 @@ option = {
         coordinateSystem: 'polar',
         stack: '均值',
         silent: true,
-        z: 10
+        z: 8
     }, {
         type: 'bar',
         data: data.map(function (d) {
@@ -85,10 +87,6 @@ option = {
         name: '均值',
         stack: '均值',
         barGap: '-100%',
-        z: 10
-    }],
-    legend: {
-        show: true,
-        data: ['A', 'B', 'C']
-    }
+        z: 8
+    }]
 };
